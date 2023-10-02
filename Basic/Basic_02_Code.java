@@ -1,6 +1,6 @@
 // Sum three number using JAVA.
 
-class BasicCode2
+class Basic_02_Code
 {
     public static void main(String[] args)
     {
