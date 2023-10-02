@@ -1,4 +1,6 @@
-class Mainn
+// Sum three number using JAVA.
+
+class BasicCode2
 {
     public static void main(String[] args)
     {
