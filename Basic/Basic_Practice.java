@@ -9,13 +9,13 @@ public class Basic_Practice {
         System.out.print("Enter First subject marks : ");
         float sub1 = scan.nextInt();
         System.out.print("Enter Second subject marks : ");
-        int sub2 = scan.nextInt();
+        float sub2 = scan.nextInt();
         System.out.print("Enter Third subject marks : ");
-        int sub3 = scan.nextInt();
+        float sub3 = scan.nextInt();
         System.out.print("Enter Fourth subject marks : ");
-        int sub4 = scan.nextInt();
+        float sub4 = scan.nextInt();
         System.out.print("Enter Fifth subject marks : ");
-        int sub5 = scan.nextInt();
+        float sub5 = scan.nextInt();
 
         float average = ((sub1 + sub2 + sub3 + sub4 + sub5) * 100) / 500;
         System.out.print("The average marks is : ");
