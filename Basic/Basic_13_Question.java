@@ -8,6 +8,5 @@ public class Basic_13_Question {
         System.out.println("-----Enter the number if number is integer return 'true' else 'false'-----");
         System.out.print("Enter the number : ");
         System.out.println(scan.hasNextInt());
-
     }
 }
