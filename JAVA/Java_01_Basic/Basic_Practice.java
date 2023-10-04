@@ -1,5 +1,6 @@
-package Java_01_Basic;// Write a Java program to convert Kilometers to miles.
+// Write a Java program to convert Kilometers to miles.
 
+package Java_01_Basic;
 import java.util.Scanner;
 class Basic_Practice {
     public static void main(String[] args) {

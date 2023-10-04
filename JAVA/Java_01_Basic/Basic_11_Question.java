@@ -1,7 +1,7 @@
 /* Write a Java program that asks the user to enter his/her name and greets
    them with “Hello <name>, have a good day” text. */
 
-import javax.naming.Name;
+package Java_01_Basic;
 import java.util.Scanner;
 public class Basic_11_Question {
     public static void main(String[] args) {

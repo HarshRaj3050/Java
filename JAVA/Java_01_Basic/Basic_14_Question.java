@@ -1,6 +1,7 @@
-package Java_01_Basic;/* Write a program to calculate the percentage of a given student in the CBSE board exam.
+/* Write a program to calculate the percentage of a given student in the CBSE board exam.
    His marks from 5 subjects must be taken as input from the keyboard. (Marks are out of 100) */
 
+package Java_01_Basic;
 import java.util.Scanner;
 class Basic_14_Question {
     public static void main(String[] args) {

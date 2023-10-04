@@ -1,5 +1,6 @@
 // Write a JAVA code Add any two number. ( User can inter number )
 
+package Java_01_Basic;
 import java.util.Scanner;
 public class Basic_03_Code {
     public static void main(String[] args) {

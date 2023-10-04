@@ -1,5 +1,6 @@
 // Write a program to calculate CGPA using marks of three subjects (out of 100)
 
+package Java_01_Basic;
 import java.util.Scanner;
 public class Basic_10_Question {
     public static void main(String[] args) {

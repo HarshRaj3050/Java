@@ -1,5 +1,6 @@
 // Sum three number using JAVA.
 
+package Java_01_Basic;
 class Basic_02_Code
 {
     public static void main(String[] args)
