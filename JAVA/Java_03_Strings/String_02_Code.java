@@ -41,11 +41,9 @@ public class String_02_Code {
         System.out.println(s1.indexOf('h',3));
 
         // Return 'true' if s1 is equal to s2
-        System.out.println("-----'true' if s1 is eaual to s2-----");
+        System.out.println("-----'true' if s1 is equal to s2-----");
         String s2 = "harsh";
         System.out.println(s1.equals(s2));
         System.out.println(s1.equalsIgnoreCase(s2));
-
-
     }
 }

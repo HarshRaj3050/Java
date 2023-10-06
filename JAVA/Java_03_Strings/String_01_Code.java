@@ -1,6 +1,6 @@
 package Java_03_Strings;
 
-public class Strings_01_Code {
+public class String_01_Code {
     public static void main(String[] args) {
         String a = "Harsh";
         String b = "Harsh";
