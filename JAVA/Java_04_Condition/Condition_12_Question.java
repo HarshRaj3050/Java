@@ -1,9 +1,11 @@
 /* Calculate income tax paid by an employee to the government as per the slabs mentioned below:
              Income Slab	Tax
-             2.5L – 5.0L  	5%
-             5.0L – 10.0L 	20%
-             Above 10.0L	30%
-    Note that there is not tax below 2.5L. Take the input amount as input from the user. */
+             5.0L – 7.5L  	5%
+             7.5L – 10.0L 	10%
+             10.0L - 12.5L	15%
+             12.5L - 15.0L  20%
+             15.0 - above   30%
+    Note that there is not tax below 5.0L. Take the input amount as input from the user. */
 
 package Java_04_Condition;
 import java.util.Scanner;
