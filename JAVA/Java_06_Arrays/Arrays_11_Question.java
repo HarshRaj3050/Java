@@ -26,10 +26,10 @@ public class Arrays_11_Question {
         }
         // Display if Integer is Present in an Array or Not Present
         if(isInArray) {
-            System.out.println("The Integer is Present in an Array");
+            System.out.println(num + " is Present in an Array");
         }
         else {
-            System.out.println("The Integer is Not Present in an Array");
+            System.out.println(num + " is Not Present in an Array");
         }
     }
 }

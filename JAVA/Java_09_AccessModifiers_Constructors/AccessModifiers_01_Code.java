@@ -1,6 +1,6 @@
 // Access modifiers, getters & setters in Java
 
-package Java_08_OOPS;
+package Java_09_AccessModifiers_Constructors;
 class Empolyee1 {
     private String name;
     private int id;
@@ -17,7 +17,7 @@ class Empolyee1 {
         return id;
     }
 }
-public class Class_02_Code {
+public class AccessModifiers_01_Code {
     public static void main(String[] args) {
         Empolyee1 emp1 = new Empolyee1();
         emp1.setName("Harsh");

@@ -1,24 +1,32 @@
+// Write a program to find out whether a given integer is present in an array or not.
+
 package Java_06_Arrays;
-
+import java.util.Enumeration;
+import java.util.Scanner;
 public class practice {
+     static void checkNumber(int [] number, int num) {
+         boolean isPresent = false;
+         for (int i : number) {
+             if (num == i) {
+                 isPresent = true;
+                 break;
+             }
+         }
+         if(isPresent) {
+             System.out.println(num + " is Present in an Array");
+         } else {
+             System.out.println(num + " is not Present in an Array");
+         }
+     }
     public static void main(String[] args) {
-        int[][] mat1 = {{5, 3, 7}, {6, 4, 7}};
-        int[][] mat2 = {{8, 2, 6}, {7, 4, 1}};
-        int[][] result = {{0, 0, 0}, {0, 0, 0}};
-
-        for (int i = 0; i < mat1.length; i++) { // row number of times
-            for (int j = 0; j < mat1[i].length; j++) { // column number of times
-                System.out.format(" Setting value for i=%d and j=%d\n", i, j);
-                result[i][j] = mat1[i][j] + mat2[i][j];
-            }
+        Scanner scan = new Scanner(System.in);
+        int [] array = {0,2,4,6,8,10};
+        System.out.print("This integer is Present in an array : ");
+        for(int i : array) {
+            System.out.print(i + " ");
         }
-        for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < result[i].length; j++) { // Fix the inner loop here
-                System.out.print(result[i][j] + " ");
-            }
-            System.out.println();
+        System.out.print("\nEnter the Number : ");
+        int num = scan.nextInt();
+        checkNumber(array, num);
         }
     }
-
-}
-
