@@ -45,7 +45,7 @@ public class Project_02_Code {
 }
 
 
-
+// Same Question with Different Way.
 
 /*
 package Minor_Project;
@@ -70,7 +70,7 @@ class Game{
         this.number = rand.nextInt(100);
     }
     void takeUserInput(){
-        System.out.println("Guess the number");
+        System.out.print("Guess the number");
         Scanner sc = new Scanner(System.in);
         inputNumber = sc.nextInt();
     }
@@ -81,10 +81,10 @@ class Game{
             return true;
         }
         else if(inputNumber<number){
-            System.out.println("Too low...");
+            System.out.println("-----Your Guess Number is Smaller, Choose Larger Number-----");
         }
         else if(inputNumber>number){
-            System.out.println("Too high...");
+            System.out.println("-----Your Guess Number is Larger, Choose Smaller Number-----");
         }
         return false;
     }
