@@ -1,20 +1,20 @@
-// Create a class Animal and Derive another class dog from it
+// Create a class Animal and Derive another class dog from it. and Enter Name and Age
 
 package Java_09_AccessModifiers_Constructors;
 import java.util.Scanner;
 class Animals{
     String animalName;
-    int animalNumber;
+    int animalAge;
     Animals(String animal, int animalNumber) {
         this.animalName = animal;
-        this.animalNumber = animalNumber;
+        this.animalAge = animalNumber;
     }
 }
 class Dog extends Animals {
     Dog(String name, int number) {
         super(name, number);
         System.out.println("The Dog Name is : " + animalName);
-        System.out.println("Number of " + animalName + " is : " + animalNumber);
+        System.out.println("AGE of " + animalName + " is : " + animalAge);
     }
 }
 public class Inheritance_10_Question {
@@ -22,7 +22,7 @@ public class Inheritance_10_Question {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter Dog Name : ");
         String aName = scan.next();
-        System.out.print("Number of " + aName + " is : ");
+        System.out.print("AGE of " + aName + " is : ");
         int aNumber = scan.nextInt();
         Animals dog = new Dog(aName, aNumber);
     }
