@@ -14,7 +14,7 @@ class Constructor2 {
         System.out.println("Name is " + name + " and Id number is : " + id);
     }
 }
-public class Constructor_02_Code {
+public class Constructor_01_Code {
     public static void main(String[] args) {
         //code to be executed on the execution of the constructor
         Constructor1 constructor1 = new Constructor1();
