@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Emp{
     private String name;
     private int id;
-    void nameSet(String n) {
+    void nameSet1(String n) {
         name = n;
     }
     String nameGet() {
@@ -23,7 +23,7 @@ public class Practice {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Emp emp1 = new Emp();
-        emp1.nameSet("Harsh Raj");
+        emp1.nameSet1("Harsh Raj");
         emp1.idSet(1004);
         emp1.details();
     }
