@@ -1,6 +1,6 @@
 // Programmer object can access the field of own class as well as of Employee class i.e. code reusability.
 
-package Java_09_AccessModifiers_Constructors;
+package Java_10_Inheritance_OverRiding;
 class Employee{
     float salary=40000;
 }

@@ -1,6 +1,6 @@
 // Create a class Animal and Derive another class dog from it. and Enter Name and Age
 
-package Java_09_AccessModifiers_Constructors;
+package Java_10_Inheritance_OverRiding;
 import java.util.Scanner;
 class Animals{
     String animalName;

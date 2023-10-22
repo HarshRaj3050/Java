@@ -1,6 +1,6 @@
 //Java Program to illustrate the use of Java Method Overriding
 
-package Java_09_AccessModifiers_Constructors;
+package Java_10_Inheritance_OverRiding;
 class Vehicle{
     void run() {
         System.out.println("Vehicle is running");
