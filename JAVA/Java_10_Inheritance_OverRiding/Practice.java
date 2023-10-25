@@ -1,39 +1,59 @@
-// Create a class circle and use inheritance to create another class cylinder from it
-/*
-
 package Java_10_Inheritance_OverRiding;
+
 import java.util.Scanner;
-class Circle {
-    public int radius;
-    Circle(int radius) {
-        this.radius = radius;
+
+interface Method {
+    void addBook(String bookName);
+    void showAvailableBooks();
+}
+
+class Library implements Method {
+    String[] book = new String[10];
+    int bookCount = 0;
+
+    public void addBook(String bookName) {
+        if (bookCount < 10) {
+            book[bookCount] = bookName;
+            bookCount++;
+        } else {
+            System.out.println("Library is full. Cannot add more books.");
+        }
     }
-    float circleArea() {
-        return (float) Math.PI * radius * radius;
+
+    public void showAvailableBooks() {
+        if (bookCount == 0) {
+            System.out.println("No books available in the library.");
+        } else {
+            System.out.println("Available books:");
+            for (int i = 0; i < bookCount; i++) {
+                System.out.println(book[i]);
+            }
+        }
     }
 }
-class Cylinder extends Circle {
-    int height;
-    Cylinder(int radius, int height) {
-        super(radius);
-        this.height = height;
-    }
-    float cylinderVolume() {
-        return (float) Math.PI * radius * radius * height;
-    }
-}
+
 public class Practice {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter the Radius : ");
-        int r = scan.nextInt();
-        System.out.print("Enter the Height : ");
-        int h = scan.nextInt();
+        Library lib = new Library();
+        lib.addBook("Java");
+        lib.addBook("Python");
+        lib.addBook("HTML");
 
-        Cylinder cy = new Cylinder(r, h);
-        System.out.println("Area of Circle is : " + cy.circleArea());
-        System.out.println("Volume of Cylinder is : " + cy.cylinderVolume());
+        System.out.println("1. Add Book\n2. Issue Book\n3. Return Book\n4. Show Available Books\n5. Exit");
+        int num = 0;
+
+        while (num != 5) {
+            System.out.print("Enter the Number : ");
+            num = scan.nextInt();
+            if (num == 1) {
+                System.out.print("Enter Book Name : ");
+                String newBook = scan.next();
+                lib.addBook(newBook);
+            } else if (num == 4) {
+                lib.showAvailableBooks();
+            }
+        }
     }
 }
 
- */
