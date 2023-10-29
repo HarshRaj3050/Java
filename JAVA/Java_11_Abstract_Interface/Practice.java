@@ -16,6 +16,14 @@ interface BasicAnimal1 {
     void eat();
     void sleep();
 }
+class Human1 extends monkey implements BasicAnimal1 {
+    public void eat() {
+        System.out.println("Eating");
+    }
+    public void sleep() {
+        System.out.println("Sleeping");
+    }
+}
 public class Practice {
     public static void main(String[] args) {
 
