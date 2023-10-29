@@ -11,6 +11,11 @@ class monkey {
         System.out.println("Biting");
     }
 }
+
+interface BasicAnimal1 {
+    void eat();
+    void sleep();
+}
 public class Practice {
     public static void main(String[] args) {
 
