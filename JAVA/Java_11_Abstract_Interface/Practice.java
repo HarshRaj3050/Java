@@ -26,6 +26,10 @@ class Human1 extends monkey implements BasicAnimal1 {
 }
 public class Practice {
     public static void main(String[] args) {
-
+        Human1 human = new Human1();
+        human.eat();
+        human.sleep();
+        human.jump();
+        human.bite();
     }
 }
