@@ -14,5 +14,7 @@ class copy extends pen {
     }
 }
 public class Practice {
-
+    public static void main(String[] args) {
+        
+    }
 }
