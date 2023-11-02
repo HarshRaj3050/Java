@@ -8,8 +8,8 @@ class Circle1 {
     public Circle1(int radius) {
         this.radius = radius;
     }
-    public void areaCircle(int radius) {
-        System.out.printf("Area of Circle is : %f", 3.14f * (radius * radius));
+    public void areaCircle() {
+        System.out.printf("Area of Circle is : %.2f\n", 3.14f * (radius * radius));
     }
 }
 class Cylinder1 extends Circle1 {
@@ -19,11 +19,13 @@ class Cylinder1 extends Circle1 {
         this.height = height;
     }
     public void areaCylinder() {
-        System.out.printf("Volume of Cylinder is : %f", 3.14f * (radius*radius) * height);
+        System.out.printf("Volume of Cylinder is : %.2f\n", 3.14f * (radius*radius) * height);
     }
 }
 public class Practice {
     public static void main(String[] args) {
-        
+        Cylinder1 cylinder = new Cylinder1(5,3);
+        cylinder.areaCircle();
+        cylinder.areaCylinder();
     }
 }
