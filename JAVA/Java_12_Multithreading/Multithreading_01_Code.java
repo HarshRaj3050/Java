@@ -13,4 +13,3 @@ public class Multithreading_01_Code {
         obj.start();
     }
 }
-6

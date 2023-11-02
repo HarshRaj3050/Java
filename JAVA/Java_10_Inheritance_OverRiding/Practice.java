@@ -1,38 +1,29 @@
-/* ------- A real example of Java Method Overriding --------
-   Consider a scenario where Bank is a class that provides functionality to get the rate of interest.
-   However, the rate of interest varies according to banks. For example, SBI, ICICI and AXIS banks
-   could provide 8%, 7%, and 9% rate of interest.
-*/
+/* Create a class circle and use inheritance to create another class cylinder and find the
+   Area of Circle and Volume of Cylinder, user can Enter the Radius and Height.
+ */
 
 package Java_10_Inheritance_OverRiding;
-interface Bank1 {
-    int rateOfInterest();
-}
-class SBI1 implements Bank1 {
-    @Override
-    public int rateOfInterest() {
-        return 8;
+class Circle1 {
+    public int radius;
+    public Circle1(int radius) {
+        this.radius = radius;
+    }
+    public void areaCircle(int radius) {
+        System.out.printf("Area of Circle is : %f", 3.14f * (radius * radius));
     }
 }
-class ICICI1 implements Bank1 {
-    @Override
-    public int rateOfInterest() {
-        return 7;
+class Cylinder1 extends Circle1 {
+    int height;
+    public Cylinder1(int radius, int height) {
+        super(radius);
+        this.height = height;
     }
-}
-class AXIS1 implements Bank1 {
-    @Override
-    public int rateOfInterest() {
-        return 9;
+    public void areaCylinder() {
+        System.out.printf("Volume of Cylinder is : %f", 3.14f * (radius*radius) * height);
     }
 }
 public class Practice {
     public static void main(String[] args) {
-        SBI1 sbi = new SBI1();
-        ICICI1 icici = new ICICI1();
-        AXIS1 axis = new AXIS1();
-        System.out.println("Rate of Interest in SBI : " + sbi.rateOfInterest() + "%");
-        System.out.println("Rate of Interest in ICICI : " + icici.rateOfInterest() + "%");
-        System.out.println("Rate of Interest in AXIS : " + axis.rateOfInterest() + "%");
+        
     }
 }
