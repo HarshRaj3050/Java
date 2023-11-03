@@ -1,6 +1,6 @@
-// Java Thread Example by extending Thread class
+// Creating threads using the thread class
 
-package Java_12_Multithreading;
+package Java_13_Multithreading;
 class Multi extends Thread {
     @Override
     public void run() {
