@@ -1,3 +1,5 @@
+// Examples of the join() and sleep() Method
+
 package Java_13_Multithreading;
 class JoinMethod extends Thread {
     @Override
