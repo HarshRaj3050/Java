@@ -15,6 +15,7 @@ class Sleep extends Thread {
 }
 public class Practice {
     public static void main(String[] args) {
-        
+        Sleep sl = new Sleep();
+        sl.start();
     }
 }
