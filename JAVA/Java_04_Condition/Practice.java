@@ -1,25 +1,9 @@
-// Write Java Program to Find Greatest of Two Numbers
+/* Write a program to find out whether a student is pass or fail; if it requires a total of
+   40% and at least 33% in each subject to pass. Assume 3 subjects and take marks as input from the user.
+ */
 
 package Java_04_Condition;
-import java.util.Scanner;
+
 public class Practice{
-    public static void greatestNum(int num1, int num2) {
-        if(num1 == num2) {
-            System.out.println("Both Number is Same");
-        }
-        else if (num1 > num2) {
-            System.out.println("First Number is Greatest");
-        }
-        else {
-            System.out.println("Second Number is Greatest");
-        }
-    }
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter First Number : ");
-        int num1 = scan.nextInt();
-        System.out.print("Enter Second Number : ");
-        int num2 = scan.nextInt();
-        greatestNum(num1, num2);
-    }
+    
 }
