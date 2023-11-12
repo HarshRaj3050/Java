@@ -29,6 +29,9 @@ public class Practice{
             else if(num==6) {
                 System.out.println("Day is : Saturday");
             }
+            else {
+                System.out.println("Day is : Sunday");
+            }
         }
         else {
             System.out.println("Enter the valid Number");
