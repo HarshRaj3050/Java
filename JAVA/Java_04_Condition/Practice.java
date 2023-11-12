@@ -10,31 +10,38 @@ public class Practice{
                 "5 for Friday\n6 for Saturday\n7 for Sunday");
         System.out.print("----Enter the Number : ");
         int num = scan.nextInt();
-        if(num>=1 && num<=7) {
-            if(num==1) {
+        switch (num) {
+            case 1: {
                 System.out.println("Day is : Monday");
+                break;
             }
-            else if(num==2) {
+            case 2: {
                 System.out.println("Day is : Tuesday");
+                break;
             }
-            else if(num==3) {
+            case 3: {
                 System.out.println("Day is : Wednesday");
+                break;
             }
-            else if(num==4) {
+            case 4: {
                 System.out.println("Day is : Thursday");
+                break;
             }
-            else if(num==5) {
+            case 5: {
                 System.out.println("Day is : Friday");
+                break;
             }
-            else if(num==6) {
+            case 6: {
                 System.out.println("Day is : Saturday");
+                break;
             }
-            else {
+            case 7: {
                 System.out.println("Day is : Sunday");
+                break;
             }
-        }
-        else {
-            System.out.println("Enter the valid Number");
+            default: {
+                System.out.println("The Number is inValid");
+            }
         }
     }
 }
