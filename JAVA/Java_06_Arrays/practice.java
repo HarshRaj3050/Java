@@ -3,7 +3,7 @@
 package Java_06_Arrays;
 import java.util.Scanner;
 public class practice {
-    static void sorted(int arr[]) {
+    static boolean sorted(int arr[]) {
         int prevNum = arr[0];
         boolean check = true;
         for(int i=0; i<arr.length; i++) {
@@ -15,6 +15,7 @@ public class practice {
                prevNum = arr[i];
            }
         }
+        return check;
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -25,6 +26,12 @@ public class practice {
             arr[j] = scan.nextInt();
             j++;
         }
-        sorted(arr);
+        boolean check = sorted(arr);
+        if(check) {
+            System.out.println("This Array is sorted");
+        }
+        else {
+            System.out.println("This Array is not sorted");
+        }
     }
 }
