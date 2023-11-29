@@ -10,7 +10,7 @@ class Cylinder3 {
         radius = r;
         height = h;
     }
-    void cylinArea(int radius, int height) {
+    void cylinArea() {
         System.out.println("Area of Cylinder is : " + (3.14f * (radius * radius) * height));
     }
 
@@ -19,7 +19,7 @@ class Circle3 extends Cylinder3 {
     Circle3(int radius, int height) {
         super(radius, height);
     }
-    void circleArea(int radius) {
+    void circleArea() {
         System.out.println("Area of Circle is : " + (3.14f * (radius * radius)));
     }
 
@@ -31,6 +31,8 @@ public class Practice {
         int radius = scan.nextInt();
         System.out.print("Enter the Height : ");
         int height = scan.nextInt();
-        Circle3 area = new Circle3();
+        Circle3 area = new Circle3(radius, height);
+        area.cylinArea();
+        area.circleArea();
     }
 }
