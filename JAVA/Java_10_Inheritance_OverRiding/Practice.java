@@ -1,32 +1,36 @@
-// Create a class Animal and Derive another class dog from it. and Enter Name and Age
+/* Create a class circle and use inheritance to create another class cylinder and find the
+   Area of Circle and Volume of Cylinder, user can Enter the Radius and Height.
+ */
 
 package Java_10_Inheritance_OverRiding;
 import java.util.Scanner;
-class Animal2 {
-    int age;
-    String name;
-    Animal2(String name, int age) {
-        this.name = name;
-        this.age = age;
+class Cylinder3 {
+    int radius, height;
+    Cylinder3(int r, int h) {
+        radius = r;
+        height = h;
     }
-    void details () {
-        System.out.println("Name is : " + name);
-        System.out.println("Age is : " + age);
+    void cylinArea(int radius, int height) {
+        System.out.println("Area of Cylinder is : " + (3.14f * (radius * radius) * height));
     }
+
 }
-class Dog2 extends Animal2 {
-    Dog2(String name, int age) {
-        super(name,age);
+class Circle3 extends Cylinder3 {
+    Circle3(int radius, int height) {
+        super(radius, height);
     }
+    void circleArea(int radius) {
+        System.out.println("Area of Circle is : " + (3.14f * (radius * radius)));
+    }
+
 }
 public class Practice {
     public static void main(String [] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter Name : ");
-        String name = scan.nextLine();
-        System.out.print("Enter Age : ");
-        int age = scan.nextInt();
-        Dog2 dog = new Dog2(name, age);
-        dog.details();
+        System.out.print("Enter the Radius : ");
+        int radius = scan.nextInt();
+        System.out.print("Enter the Height : ");
+        int height = scan.nextInt();
+        Circle3 area = new Circle3();
     }
 }
