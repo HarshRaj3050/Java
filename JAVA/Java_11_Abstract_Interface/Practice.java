@@ -1,27 +1,22 @@
-/*   Create a class monkey with jump ( ) and bite ( ) methods Create a class human which inherits
-     this monkey class and implements BasicAnimal interface with eat ( ) and sleep ( ) methods
- */
+// Create an abstract class pen with methods write () and refill () as abstract methods
 
 package Java_11_Abstract_Interface;
-class monkey {
-    public void jump() {
-        System.out.println("Jumping");
-    }
-    public void bite() {
-        System.out.println("Biting");
-    }
+abstract class Pen1 {
+    abstract void write();
+    abstract void refill();
 }
-interface BasicAnimal45 {
-    void eat();
-    void sleep();
-}
-class Human45 extends monkey implements BasicAnimal45{
-    public void eat() {
-        System.out.println("Eating");
+class BallPen1 extends Pen {
+    void write() {
+        System.out.println("Hello World");
     }
-    public void sleep() {
-        System.out.println("Sleeping");
+    void refill() {
+        System.out.println("This pen is black");
     }
 }
 public class Practice {
+    public static void main(String[] args) {
+        BallPen1 ballPen = new BallPen1();
+        ballPen.write(); // for print text
+        ballPen.refill(); // 
+    }
 }
