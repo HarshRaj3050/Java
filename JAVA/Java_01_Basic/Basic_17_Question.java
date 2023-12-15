@@ -2,14 +2,14 @@
 
 package Java_01_Basic;
 import java.util.Scanner;
-class Basic_Practice {
-    public static void main(String[] args) {
+public class Basic_17_Question {
+    public static void main(String [] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the Number : ");
         int num = scan.nextInt();
         int result = armStrong(num);
 
-        if(num == result) {
+        if(result == num) {
             System.out.println(num + " is Armstrong Number");
         }
         else {
@@ -17,11 +17,11 @@ class Basic_Practice {
         }
     }
     static int armStrong(int num) {
-        int result=0, remain;
+        int remain, result=0;
         while(num > 0) {
             remain = num % 10;
-            result = result + (remain * remain * remain);
             num = num / 10;
+            result = result + (remain*remain*remain);
         }
         return result;
     }
