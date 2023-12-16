@@ -1,35 +1,21 @@
-// Write a program to check if the given number is Armstrong or not.
+/* Write a program to print the following pattern :
+    *
+   * *
+  * * *
+ * * * *                             */
 
 package Java_01_Basic;
-class Patten {
-    int row;
-    Patten(int row) {
-        this.row = row;
-    }
-    public void pattenOutput() {
-        int max=1;
-        for (int i = 1; i <= row; i++) {
-            for(int k = 3; k>=i; k--) {
+class Basic_Practice {
+    public static void main(String[] args) {
+        int row = 4;
+        for(int i=1; i<=row; i++){
+            for(int j=4; j>i; j--){
                 System.out.print(" ");
             }
-            for (int j = 1; j <= i; j++) {
-                int value = (int) Math.pow(2, j);
-                System.out.print(value);
-                max = value;
-            }
-            while(max > 2) {
-                int value = max / 2;
-                System.out.print(value);
-                max = max / 2;
+            for(int l=1; l<=i; l++){
+                System.out.print(" *");
             }
             System.out.println();
         }
     }
-}
-class Basic_Practice {
-    public static void main(String[] args) {
-        Patten p = new Patten(3);
-        p.pattenOutput();
-    }
-
 }
