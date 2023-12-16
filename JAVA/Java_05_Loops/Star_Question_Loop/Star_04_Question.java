@@ -20,12 +20,10 @@ class Patten {
                 System.out.print(value);
                 max = value;
             }
-            for(int l = max; max > 2; max--){
-                int value = max/2;
-                if(value % 2 == 0) {
-                    System.out.print(value);
-                    max-=1;
-                }
+            while(max > 2) {
+                int value = max / 2;
+                System.out.print(value);
+                max = max / 2;
             }
             System.out.println();
         }

@@ -1,28 +1,35 @@
 // Write a program to check if the given number is Armstrong or not.
 
 package Java_01_Basic;
-import java.util.Scanner;
+class Patten {
+    int row;
+    Patten(int row) {
+        this.row = row;
+    }
+    public void pattenOutput() {
+        int max=1;
+        for (int i = 1; i <= row; i++) {
+            for(int k = 3; k>=i; k--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                int value = (int) Math.pow(2, j);
+                System.out.print(value);
+                max = value;
+            }
+            while(max > 2) {
+                int value = max / 2;
+                System.out.print(value);
+                max = max / 2;
+            }
+            System.out.println();
+        }
+    }
+}
 class Basic_Practice {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter the Number : ");
-        int num = scan.nextInt();
-        int result = armStrong(num);
+        Patten p = new Patten(3);
+        p.pattenOutput();
+    }
 
-        if(num == result) {
-            System.out.println(num + " is Armstrong Number");
-        }
-        else {
-            System.out.println(num + " is Not Armstrong Number");
-        }
-    }
-    static int armStrong(int num) {
-        int result=0, remain;
-        while(num > 0) {
-            remain = num % 10;
-            result = result + (remain * remain * remain);
-            num = num / 10;
-        }
-        return result;
-    }
 }
