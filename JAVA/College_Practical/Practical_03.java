@@ -1,5 +1,7 @@
 package College_Practical;
+import java.util.Objects;
 import java.util.Scanner;
+import java.lang.String;
 
 class MusicPlayer {
     String[] songName = new String[10];
@@ -18,28 +20,55 @@ class MusicFunction extends MusicPlayer {
             }
         }
     }
-    public void addSong(String songN, int songL) {
+    public void addSong(String songN, int songL, String genre) {
         for (int i = 0; i < songName.length; i++) {
             if (songName[i] == null) {
                 songName[i] = songN;
                 songLength[i] = songL;
+                this.genre[i] = genre;
                 break;
             }
         }
         System.out.println("!! Song is Add Successful !!\n");
     }
-    public void playSong(String playSong) {
-
-    }
 }
 class PlaySong extends MusicFunction {
+    String currentSong;
+    String nextSong;
+    String previousSong;
+    int volume = 5;
     public void shuffle(int shuffle) {
         if(shuffle == 1) {
-            System.out.println("Repeat ");
+            System.out.println("|| Repeat ||");
+        }
+        else if(shuffle == 2) {
+            System.out.println("|| Shuffle all song ||");
         }
     }
     public void pause() {
-        System.out.println("Pause the Song");
+        System.out.println("|| Pause the Song ||");
+    }
+    public void nextSong() {
+        for (String s : songName) {
+            if (Objects.equals(currentSong, s)) {
+                currentSong = s;
+                System.out.println("--------------------\n<" + currentSong + "> Song is Play\n--------------------");
+
+            } else {
+                break;
+            }
+        }
+    }
+    public void volumeUP() {
+        this.volume++;
+        System.out.println("|| Volume : " + volume + " ||");
+    }
+    public void volumeDown() {
+        this.volume--;
+        System.out.println("|| Volume : " + volume + " ||");
+    }
+    public void download() {
+        System.out.println("|| " + currentSong + " song is Download ||");
     }
 }
 public class Practical_03 {
@@ -52,9 +81,8 @@ public class Practical_03 {
         System.out.println("---------------------\n\tMUSIC PLAYER\n---------------------");
         System.out.println("1. Song List\n2. Add Song\n3. Play Song\n4. Exit");
 
-        int option = 0;
-
-        while (option != 4) {
+        int option;
+        while (true) {
             System.out.print("**** Select the Number : ");
             option = scan.nextInt();
 
@@ -65,22 +93,50 @@ public class Practical_03 {
                 String songN = scan.next();
                 System.out.print("Enter Song Length : ");
                 int songL = scan.nextInt();
-                musicfunction.addSong(songN, songL);
+                System.out.println("""
+                        \t1. Rock Music
+                        \t2. Jazz Music
+                        \t3. Pop Music
+                        \t4. Electron""");
+                System.out.print("Select the genre : ");
+                int gen = scan.nextInt();
+                String genre;
+                if(gen == 1) {
+                    genre = "Rock Music";
+                }
+                else if(gen == 2) {
+                    genre = "Jazz Music";
+                }
+                else if(gen == 3) {
+                    genre = "Pop  Music";
+                }
+                else {
+                    genre = "Electron";
+                }
+                musicfunction.addSong(songN, songL, genre);
             }
 
             else if (option == 3) {
                 musicfunction.list();
                 System.out.print("Which Song Play : ");
                 String playSong = scan.next();
+                playsong.currentSong = playSong;
                 System.out.println("--------------------\n<" + playSong + "> Song is Play\n--------------------");
-                System.out.println("\t1. Pause\n\t2. Shuffle\n\t3. Next Song play\n\t4. Previous Song Play" +
-                        "\n\t5. Volume up\n\t6. volume down\n\t7. Download\n\t8. Stop");
-                int play = 0;
-                while(play != 8) {
-                    System.out.print("Enter the Number for use Function");
+                System.out.println("""
+                        \t1. Pause
+                        \t2. Shuffle
+                        \t3. Next Song play
+                        \t4. Previous Song Play
+                        \t5. Volume up
+                        \t6. volume down
+                        \t7. Download
+                        \t8. Stop""");
+                int play;
+                while(true) {
+                    System.out.print("Enter the Number for use Function : ");
                     play = scan.nextInt();
                     if(play == 1) {
-                        System.out.println("pause");
+                        playsong.pause();
                     }
                     else if(play == 2) {
                         System.out.println("\t1. Repeat\n\t2. Shuffle all song");
@@ -89,26 +145,25 @@ public class Practical_03 {
                         playsong.shuffle(shuffle);
                     }
                     else if(play == 3) {
-                        System.out.println("Next Song play");
+                        playsong.nextSong();
                     }
                     else if(play == 4) {
                         System.out.println("Previous Song play");
                     }
                     else if(play == 5) {
-                        System.out.println("Volume up");
+                        playsong.volumeUP();
                     }
                     else if(play == 6) {
-                        System.out.println("Volume down");
+                        playsong.volumeDown();
                     }
                     else if(play == 7) {
-                        System.out.println("Download");
+                        playsong.download();
                     }
                     else if (play == 8) {
-                        System.out.println("song is STOP");
+                        System.out.println("|X| Song is STOP |X|\n");
                         break;
                     }
                 }
-                musicfunction.playSong(playSong);
             }
             else if (option == 4) {
                 break;
