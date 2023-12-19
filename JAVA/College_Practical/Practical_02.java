@@ -10,10 +10,10 @@ public class Practical_02 {
         double result = 0;
         for(int i=0; i <= numLimit; i++) {
             if(i==0 || i==1) {
-                fact = i;
+                fact = 1.0/i;
             }
             else {
-                fact = fact * i;
+                fact = fact * 1/i;
                 if(i%2==0) {
                     result = result + fact;
                 }
