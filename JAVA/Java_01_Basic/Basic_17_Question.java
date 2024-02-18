@@ -17,11 +17,23 @@ public class Basic_17_Question {
         }
     }
     static int armStrong(int num) {
-        int remain, result=0;
+        // Count the Number of digits
+        int count=0, temp;
+        temp = num;
+        while(temp>0) {
+            temp = temp/10;
+            count++;
+        }
+        // Split into single digit and Sum
+        int remain, singleDigit, result=0;
         while(num > 0) {
             remain = num % 10;
+            singleDigit = 1;
+            for(int i=1; i<=count; i++) {
+                singleDigit = singleDigit * remain;
+            }
+            result = result + singleDigit;
             num = num / 10;
-            result = result + (remain*remain*remain);
         }
         return result;
     }

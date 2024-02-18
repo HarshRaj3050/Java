@@ -34,8 +34,6 @@ class MusicFunction extends MusicPlayer {
 }
 class PlaySong extends MusicFunction {
     String currentSong;
-    String nextSong;
-    String previousSong;
     int volume = 5;
     public void shuffle(int shuffle) {
         if(shuffle == 1) {
